@@ -5,17 +5,22 @@
  */
 package iloveyouboss;
 
+import java.util.*;
+
 /**
  *
- * @author mcdonasc
+ * Clone of code from "Pragmatic Unit Testing" by Hunt, Thomas, Langr
  */
 public class ScoreCollection {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    private final List<Scoreable> scores = new ArrayList<>();
+    
+    public void add(Scoreable scoreable) {
+        scores.add(scoreable);
     }
     
+    public int arithmeticMean() {
+        int total = scores.stream().mapToInt(Scoreable::getScore).sum();
+        return total / scores.size();
+    }   
 }

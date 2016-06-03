@@ -5,11 +5,18 @@
  */
 package iloveyouboss;
 
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 /**
  *
- * Clone of code from "Pragmatic Unit Testing" by Hunt, Thomas, Langr
+ * @author mcdonasc
  */
-@FunctionalInterface
-public interface Scoreable {
-    int getScore();
+public class ScoreCollectionTest {
+
+    @Test
+    public void testArithmeticMean() {
+        //fail();
+    }
+    
 }
